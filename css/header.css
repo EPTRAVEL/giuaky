@@ -7,7 +7,7 @@ body {
 .topnav {
     overflow: hidden;
     background-color: rgb(148, 3, 3);
-    /* position: sticky; */
+    position: sticky;
     top: 0;
 }
 
@@ -86,5 +86,5 @@ body {
         background-color: rgba(148, 3, 3, 0);
     }
     .nav-item{
-        background-color: rgb(148, 3, 3);    }
+background-color: rgb(148, 3, 3);    }
 }

@@ -7,18 +7,107 @@
     <title>Home</title>
     <script src="https://www.w3schools.com/lib/w3.js"></script>
 
+    <!-- linkCss -->
+    <link rel="stylesheet" href="../css/home.css">
+    
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script> -->
+    <script>
+        let app = angular.module("angularApp", []);
+        app.controller("myController", function($scope, $http) {
+            $http({
+                method: "GET",
+                url: "../Data/Data.xml" //Có thể dẫn link của file json vào
+            }).then(
+                function success(response) {
+                    $scope.stores = response.data;
+                },
+                function error(response) {
+                    $scope.error = response.statusText;
+                }
+            )
+        })
+    </script>
 </head>
-<body>
+<body ng-app="angularApp" ng-controller="myController">
     <!-- header -->
     <div w3-include-html="header.html"></div>
 
-    <div class="home-container">
+    <!-- Nội dung -->
+    <div class="home-container" ng-repeat="s in stores ">
         <div class="home-item">
             <img src="../Logo/ElGaucho.png" alt="error">
-            <p>EL GauCho</p>
+            <p id="home-item-ten">EL GauCho</p>
+            <p>7 địa điểm</p>
+            <p id="home-item-hoan">Hoàn tiền 15%</p>
+        </div>
+
+        <div class="home-item">
+            <img src="../Logo/ElGaucho.png" alt="error">
+            <p id="home-item-ten">EL GauCho</p>
+            <p>7 địa điểm</p>
+            <p id="home-item-hoan">Hoàn tiền 15%</p>
+        </div>
+
+        <div class="home-item">
+            <img src="../Logo/ElGaucho.png" alt="error">
+            <p id="home-item-ten">EL GauCho</p>
+            <p>7 địa điểm</p>
+            <p id="home-item-hoan">Hoàn tiền 15%</p>
+        </div>
+
+        <div class="home-item">
+            <img src="../Logo/ElGaucho.png" alt="error">
+            <p id="home-item-ten">EL GauCho</p>
+            <p>7 địa điểm</p>
+            <p id="home-item-hoan">Hoàn tiền 15%</p>
+        </div>
+
+        <div class="home-item">
+            <img src="../Logo/ElGaucho.png" alt="error">
+            <p id="home-item-ten">EL GauCho</p>
+            <p>7 địa điểm</p>
+            <p id="home-item-hoan">Hoàn tiền 15%</p>
+        </div>
+
+        <div class="home-item">
+            <img src="../Logo/ElGaucho.png" alt="error">
+            <p id="home-item-ten">EL GauCho</p>
+            <p>7 địa điểm</p>
+            <p id="home-item-hoan">Hoàn tiền 15%</p>
+        </div>
+
+        <div class="home-item">
+            <img src="../Logo/ElGaucho.png" alt="error">
+            <p id="home-item-ten">EL GauCho</p>
+            <p>7 địa điểm</p>
+            <p id="home-item-hoan">Hoàn tiền 15%</p>
+        </div>
+
+        <div class="home-item">
+            <img src="../Logo/ElGaucho.png" alt="error">
+            <p id="home-item-ten">EL GauCho</p>
+            <p>7 địa điểm</p>
+            <p id="home-item-hoan">Hoàn tiền 15%</p>
+        </div>
+
+        <div class="home-item">
+            <img src="../Logo/ElGaucho.png" alt="error">
+            <p id="home-item-ten">EL GauCho</p>
+            <p>7 địa điểm</p>
+            <p id="home-item-hoan">Hoàn tiền 15%</p>
+        </div>
+
+        <div class="home-item">
+            <img src="../Logo/ElGaucho.png" alt="error">
+            <p id="home-item-ten">EL GauCho</p>
+            <p>7 địa điểm</p>
+            <p id="home-item-hoan">Hoàn tiền 15%</p>
         </div>
     </div>
 
+  
+</div>
     <script>
         w3.includeHTML();
     </script>

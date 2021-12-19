@@ -1,0 +1,29 @@
+
+
+.modal-container{
+    width: 60%;
+    margin: 10px auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+.modal-hinh{
+    background-color: white;
+    margin-bottom: 0px;
+}
+.modal-hinh img{
+    width: 150px;
+    height: 100px;
+    margin: 0px;
+}
+.modal-hinh h3{
+    color: brown;
+    margin: 0px;
+}
+.modal-danhsach{
+    background-color: brown;
+    color: white;
+    margin-top: 0px ;
+}
